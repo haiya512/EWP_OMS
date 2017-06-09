@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import svn.local,svn.remote
+import svn.local, svn.remote
 import pprint
 import sys
 # reload(sys)

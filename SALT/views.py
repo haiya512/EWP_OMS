@@ -11,10 +11,10 @@ from models import *
 from CMDB.models import *
 from SaltAPI import SaltAPI
 import json
-from django.forms.models import model_to_dict
+# from django.forms.models import model_to_dict
 import re
 
-#获取命令
+# 获取命令
 @login_required
 def command(request):
     module_id = request.GET.get('module_id')
@@ -46,7 +46,7 @@ def command(request):
 
 
     cmd_list=Command.objects.order_by('cmd')
-    module_list=Module.objects.order_by('client','name')
+    module_list = Module.objects.order_by('client','name')
     #按模块过滤
     if  request.method=='GET' and module_id:
             cmd_list = cmd_list.filter(module=module_id)
